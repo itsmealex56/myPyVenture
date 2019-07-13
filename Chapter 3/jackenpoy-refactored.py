@@ -1,5 +1,7 @@
 import random
 
+winner = ''
+
 random_choice = random.randint(0,2)
 
 if random_choice == 0:
@@ -9,7 +11,11 @@ elif random_choice == 1:
 else:
     computer_choice = 'scissors'
 
-my_choice = input('Rock, Paper, or Scissors? ')
+my_choice = ''
+while (my_choice != 'rock' and 
+       my_choice != 'paper' and 
+       my_choice != 'scissors'):
+    my_choice = input('Rock, Paper, or Scissors? ')
 
 if computer_choice == my_choice:
     winner = 'Tie'
